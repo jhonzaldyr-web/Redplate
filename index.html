@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Plate Grill Ordering System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header class="image-header">
+  <div class="header-overlay"></div>
+  <div class="header-content">
+    <img src="images/redplate-logo.jpg" class="header-logo">
+    <div>
+      <h1>Red Plate Grill and Restaurant</h1>
+      <p class="branch">BATANGAS CITY BRANCH | 0917 689 1001</p>
+      <span class="updated">Updated Menu</span>
+    </div>
+  </div>
+</header>
+
+<div class="menu-search">
+  <input type="text" id="searchBar" placeholder="🔍 Search menu..." onkeyup="searchMenu()">
+</div>
+
+<h2 class="menu-title">🍽️ Our Menu</h2>
+
+<main class="main-container">
+
+  <div id="menu-list" class="menu-container"></div>
+
+  <section class="cart">
+    <h2>🛒 Your Order</h2>
+    <div id="cart-items"></div>
+
+    <input type="number" id="discountInput" placeholder="Discount %">
+    <button onclick="applyDiscount()">Apply Discount</button>
+
+    <div class="total">
+      Total: ₱<span id="total">0.00</span>
+    </div>
+
+    <button onclick="checkoutAndPrint()">🧾 Checkout & Print</button>
+    <button onclick="clearCart()">Clear</button>
+    <button onclick="viewHistory()">📜 Order History</button>
+  </section>
+
+</main>
+
+<div id="historyModal" class="modal">
+  <div class="modal-content">
+    <button class="back-btn" onclick="closeHistory()">⬅ Back to Menu</button>
+    <h2>📜 Order History</h2>
+    <div id="historyContent"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
