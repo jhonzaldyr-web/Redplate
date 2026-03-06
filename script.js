@@ -34,6 +34,10 @@ let cart = [];
 let discount = 0;
 let discountUsed = false;
 
+// ===== PAYMENT VARIABLES (NEW) =====
+let payment = 0;
+let change = 0;
+
 // ================= LOAD MENU =================
 
 window.onload = () => {
@@ -174,6 +178,8 @@ function checkoutAndPrint(){
       <p>Discount: ₱${discountAmount.toFixed(2)}</p>
       <hr>
       <b>Total: ₱${finalTotal.toFixed(2)}</b>
+      <p>Payment: ₱${payment.toFixed(2)}</p>
+      <p>Change: ₱${change.toFixed(2)}</p>
       <p style="text-align:center;font-size:12px;margin-top:10px;">
         Thank you!<br>Please come again ❤️
       </p>
@@ -252,6 +258,10 @@ function checkoutAndPrint(){
   discountUsed = false;
   document.getElementById("discountInput").value = "";
   updateCart();
+  document.getElementById("paymentInput").value = "";
+document.getElementById("change").innerText = "0.00";
+payment = 0;
+change = 0;
 
 
 // ================= SEARCH =================
@@ -296,4 +306,25 @@ function viewHistory(){
 
 function closeHistory(){
   document.getElementById("historyModal").style.display = "none";
+}
+// ================= PAYMENT =================
+
+function computePayment(){
+
+  const total = Number(document.getElementById("total").innerText);
+  payment = Number(document.getElementById("paymentInput").value);
+
+  if(payment === 0){
+    alert("Please enter payment amount");
+    return;
+  }
+
+  if(payment < total){
+    alert("Payment is not enough");
+    return;
+  }
+
+  change = payment - total;
+
+  document.getElementById("change").innerText = change.toFixed(2);
 }
