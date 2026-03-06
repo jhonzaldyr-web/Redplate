@@ -163,3 +163,109 @@ button {
     font-size: 15px;
   }
 }
+/* ===== PAYMENT SECTION ===== */
+
+.payment-box{
+  margin-top:15px;
+  padding:10px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  background:#fafafa;
+}
+
+.payment-box input{
+  width:100%;
+  padding:8px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.change-display{
+  margin-top:8px;
+  font-size:18px;
+  font-weight:bold;
+  text-align:right;
+}
+/* ================= MOBILE PHONE SUPPORT ================= */
+
+@media (max-width: 600px) {
+
+  body{
+    font-size:14px;
+  }
+
+  .header-content{
+    flex-direction:column;
+    text-align:center;
+    gap:10px;
+  }
+
+  .header-logo{
+    width:70px;
+  }
+
+  .image-header{
+    height:auto;
+    padding:10px 0;
+  }
+
+  .menu-title{
+    text-align:center;
+    font-size:20px;
+  }
+
+  .menu-search{
+    padding:10px;
+    text-align:center;
+  }
+
+  #searchBar{
+    width:90%;
+    padding:8px;
+    border-radius:6px;
+    border:1px solid #ccc;
+  }
+
+  .main-container{
+    display:block;
+    padding:10px;
+  }
+
+  .menu-container{
+    flex-direction:column;
+    align-items:center;
+    padding:10px;
+  }
+
+  .menu-item{
+    width:95%;
+    margin-bottom:15px;
+  }
+
+  .cart{
+    width:95%;
+    margin:15px auto;
+  }
+
+  .cart button{
+    width:100%;
+    margin-top:5px;
+  }
+
+  input[type="number"]{
+    width:100%;
+    padding:8px;
+    margin-top:5px;
+  }
+
+  .total{
+    font-size:18px;
+  }
+
+  .modal-content{
+    width:95%;
+    margin:30px auto;
+  }
+
+}
