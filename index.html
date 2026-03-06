@@ -42,6 +42,19 @@
       Total: ₱<span id="total">0.00</span>
     </div>
 
+    <!-- PAYMENT SECTION (NEW) -->
+<div class="payment-box">
+  <h3>💵 Payment</h3>
+
+  <input type="number" id="paymentInput" placeholder="Enter payment amount">
+
+  <button onclick="computePayment()">Compute Change</button>
+
+  <div class="change-display">
+    Change: ₱<span id="change">0.00</span>
+  </div>
+</div>
+
     <button onclick="checkoutAndPrint()">🧾 Checkout & Print</button>
     <button onclick="clearCart()">Clear</button>
     <button onclick="viewHistory()">📜 Order History</button>
@@ -60,3 +73,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
