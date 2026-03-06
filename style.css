@@ -140,7 +140,7 @@ button {
   body {
     background: none !important;
     margin: 0;
-    font-family: monospace;
+    font-family: "Palatino Linotype", Palatino, serif;
   }
 
   h3 {
